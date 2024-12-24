@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Mind Matters</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        .menu-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            z-index: 2;
+        }
+        .menu-bar a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        .menu-bar a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease-in-out;
+        }
+        .menu-bar a:hover::after {
+            width: 100%;
+        }
+        .content {
+            margin: 80px auto;
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .gray-placeholder {
+            width: 200px;
+            height: 200px;
+            background: gray;
+            margin: 20px auto;
+        }
+        h1, h2 {
+            color: #444;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-bar">
+        <a href="index.html" class="menu-link">Home</a>
+        <a href="about.html" class="menu-link">About</a>
+        <a href="https://donate.stripe.com/test_14k6po9cy5ycepqdQQ" class="menu-link" target="_blank">Donate</a>
+    </div>
+    <div class="content">
+        <div class="section">
+            <h1>Our Mission</h1>
+            <p>At Mind Matters, our mission is to raise and allocate funds for groundbreaking neuroscience research aimed at curing Alzheimer's, dementia, Parkinson's, and other neurological disorders. We are committed to supporting the scientists and researchers who are making strides in understanding and treating these conditions. By funding innovative research, we provide hope and work towards a future where these debilitating diseases are a thing of the past. Join us in empowering minds and transforming lives through the power of science and community support.</p>
+        </div>
+        <div class="section">
+            <h1>The Team</h1>
+            <h3>Founder</h3>
+            <div class="gray-placeholder"></div>
+            <h3>Rhys Ahamparam</h3>
+            <p>Hi, my name is Rhys Ahamparam, and I’m a high school junior from Houston, Texas. I founded this nonprofit in memory of my grandfather, who was diagnosed with Lewy body dementia. Watching him battle this disease had a profound impact on me, and his passing earlier this year inspired me to take action. Through this organization, I hope to raise awareness and support for neuroscience research, aiming to make a difference for others affected by similar conditions.</p>
+        </div>
+    </div>
+</body>
+</html>

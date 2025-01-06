@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Mind Matters</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        .menu-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            z-index: 2;
+        }
+        .menu-bar a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        .menu-bar a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.3s ease-in-out;
+        }
+        .menu-bar a:hover::after {
+            width: 100%;
+        }
+        .content {
+            margin: 80px auto;
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 50px;
+        }
+        .payment-section {
+            text-align: center;
+        }
+        .payment-logo img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .payment-handle {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-bar">
+        <a href="index.html" class="menu-link">Home</a>
+        <a href="about.html" class="menu-link">About</a>
+        <a href="donate.html" class="menu-link">Donate</a>
+    </div>
+    <div class="content">
+        <!-- Venmo Section -->
+        <div class="payment-section">
+            <div class="payment-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Venmo_logo.svg/512px-Venmo_logo.svg.png" alt="Venmo Logo">
+            </div>
+            <div class="payment-handle">@mindmatters_foundation</div>
+        </div>
+
+        <!-- Zelle Section -->
+        <div class="payment-section">
+            <div class="payment-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Zelle_logo.svg/512px-Zelle_logo.svg.png" alt="Zelle Logo">
+            </div>
+            <div class="payment-handle">[Your Zelle Handle Here]</div>
+        </div>
+    </div>
+</body>
+</html>
 

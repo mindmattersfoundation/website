@@ -31,73 +31,79 @@
             justify-content: center;
             padding: 10px 0;
             z-index: 2;
-            font-size: 1rem;
         }
         .menu-bar a {
             margin: 0 20px;
             text-decoration: none;
             color: var(--white);
             font-size: 1rem;
-            position: relative;
-            display: inline-block;
-        }
-        .menu-bar a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--white);
-            transition: width 0.3s ease-in-out;
-        }
-        .menu-bar a:hover::after {
-            width: 100%;
         }
         .content {
-            margin: 80px auto;
+            margin: 120px auto;
             max-width: 800px;
-            padding: 20px;
             text-align: center;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            gap: 50px;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 150px;
+        }
+        .donate-intro {
+            margin: 20px 0;
+            font-size: 1.2rem;
+            line-height: 1.6;
         }
         .payment-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .payment-option {
             text-align: center;
+            padding: 20px;
+            border: 1px solid var(--secondary-color);
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
-        .payment-logo img {
-            width: 150px;
+        .payment-option:hover {
+            transform: translateY(-5px);
+        }
+        .payment-option img {
+            width: 100px;
             margin-bottom: 10px;
         }
-        .payment-name {
+        .cta-buttons {
+            margin: 20px 0;
+        }
+        .cta-buttons button {
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
             font-size: 1rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #555;
+            cursor: pointer;
+            transition: background 0.3s ease;
         }
-        .payment-handle {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #444;
+        .cta-buttons button:hover {
+            background: var(--secondary-color);
         }
         footer {
             background: var(--secondary-color);
             color: var(--white);
             padding: 20px;
             text-align: center;
-            margin-top: auto;
         }
         footer .social-buttons {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin: 20px 0;
-        }
-        footer .social-buttons a {
-            display: flex;
-            align-items: center;
         }
         footer .social-buttons img {
             width: 40px;
@@ -106,38 +112,37 @@
         footer a {
             color: var(--primary-color);
             text-decoration: none;
-            margin: 0 10px;
-        }
-        footer a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="menu-bar">
-        <a href="/website" class="menu-link">Home</a>
-        <a href="/website/about" class="menu-link">About</a>
-        <a href="/website/donate" class="menu-link">Donate</a>
-        <a href="/website/volunteer" class="menu-link">Volunteer</a>
+        <a href="/website">Home</a>
+        <a href="/website/about">About</a>
+        <a href="/website/donate">Donate</a>
+        <a href="/website/volunteer">Volunteer</a>
     </div>
     <div class="content">
-        <!-- Venmo Section -->
-        <div class="payment-section">
-            <div class="payment-logo">
-                <img src="venmologo.png" alt="Venmo Logo">
-            </div>
-            <div class="payment-name">Venmo</div>
-            <div class="payment-handle">@mindmatters_foundation</div>
+        <div class="logo">
+            <img src="MindMattersLogo_Upload.png" alt="Mind Matters Logo">
+            <h2>Mind Matters Foundation</h2>
         </div>
-
-        <!-- Zelle Section -->
+        <p class="donate-intro">
+            Your generosity helps us fund groundbreaking neuroscience research and support communities impacted by neurological disorders.
+        </p>
         <div class="payment-section">
-            <div class="payment-logo">
-                <img src="zellelogo.png" alt="Zelle Logo">
+            <div class="payment-option">
+                <img src="venmologo.png" alt="Venmo">
+                <p>Donate via Venmo</p>
+                <p><strong>@mindmatters_foundation</strong></p>
             </div>
-            <div class="payment-name">Zelle</div>
-            <div class="payment-handle">mindmattersfoundation24@gmail.com</div>
+            <div class="payment-option">
+                <img src="zellelogo.png" alt="Zelle">
+                <p>Donate via Zelle</p>
+                <p><strong>mindmattersfoundation24@gmail.com</strong></p>
+            </div>
         </div>
+        <p>Your payment information is handled securely. We do not store or share your personal information.</p>
     </div>
     <footer>
         <div class="social-buttons">
@@ -149,7 +154,7 @@
             </a>
         </div>
         <p>
-            <a href="/website/">Home</a> |
+            <a href="/website">Home</a> |
             <a href="/website/about">About</a> |
             <a href="/website/donate">Donate</a> |
             <a href="/website/volunteer">Volunteer</a>

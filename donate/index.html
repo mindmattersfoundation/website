@@ -19,7 +19,7 @@
             background: var(--white);
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            min-height: 100vh; /* Ensures the page height fills the viewport */
         }
         .menu-bar {
             position: fixed;
@@ -39,9 +39,10 @@
             font-size: 1rem;
         }
         .content {
-            margin: 120px auto;
+            margin: 120px auto 20px; /* Add spacing above and below */
             max-width: 800px;
             text-align: center;
+            flex: 1; /* Pushes footer to the bottom if content is short */
         }
         .logo {
             margin-bottom: 20px;
@@ -66,7 +67,7 @@
             padding: 20px;
             border: 1px solid var(--secondary-color);
             border-radius: 10px;
-            width: 250px;
+            width: 280px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
@@ -77,27 +78,23 @@
             width: 100px;
             margin-bottom: 10px;
         }
-        .cta-buttons {
-            margin: 20px 0;
-        }
-        .cta-buttons button {
-            background: var(--primary-color);
-            color: var(--white);
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
+        .payment-name {
             font-size: 1rem;
-            cursor: pointer;
-            transition: background 0.3s ease;
+            margin-bottom: 5px;
+            font-weight: bold;
         }
-        .cta-buttons button:hover {
-            background: var(--secondary-color);
+        .payment-handle {
+            font-size: 1.1rem;
+            font-weight: bold;
+            word-break: break-word;
+            color: var(--secondary-color);
         }
         footer {
             background: var(--secondary-color);
             color: var(--white);
             padding: 20px;
             text-align: center;
+            margin-top: auto; /* Ensures footer stays at the bottom */
         }
         footer .social-buttons {
             display: flex;
@@ -124,7 +121,7 @@
     </div>
     <div class="content">
         <div class="logo">
-            <img src="MindMattersLogo_Upload.png" alt="Mind Matters Logo">
+            <img src="/website/MindMattersLogo_Upload.png" alt="Mind Matters Logo">
             <h2>Mind Matters Foundation</h2>
         </div>
         <p class="donate-intro">
@@ -133,13 +130,13 @@
         <div class="payment-section">
             <div class="payment-option">
                 <img src="venmologo.png" alt="Venmo">
-                <p>Donate via Venmo</p>
-                <p><strong>@mindmatters_foundation</strong></p>
+                <p class="payment-name">Donate via Venmo</p>
+                <p class="payment-handle">@mindmatters_foundation</p>
             </div>
             <div class="payment-option">
                 <img src="zellelogo.png" alt="Zelle">
-                <p>Donate via Zelle</p>
-                <p><strong>mindmattersfoundation24@gmail.com</strong></p>
+                <p class="payment-name">Donate via Zelle</p>
+                <p class="payment-handle">mindmattersfoundation24@gmail.com</p>
             </div>
         </div>
         <p>Your payment information is handled securely. We do not store or share your personal information.</p>

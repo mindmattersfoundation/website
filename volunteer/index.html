@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer - Mind Matters</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --primary-color: rgb(45, 197, 105);
+            --secondary-color: rgb(10, 129, 66);
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--secondary-color);
+            background: var(--white);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .menu-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            z-index: 2;
+            font-size: 1rem;
+        }
+        .menu-bar a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: var(--white);
+            font-size: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        .menu-bar a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--white);
+            transition: width 0.3s ease-in-out;
+        }
+        .menu-bar a:hover::after {
+            width: 100%;
+        }
+        .content {
+            margin: 80px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 20px;
+            text-align: center;
+            margin-top: auto;
+        }
+        footer .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        footer .social-buttons a {
+            display: flex;
+            align-items: center;
+        }
+        footer .social-buttons img {
+            width: 40px;
+            height: 40px;
+        }
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-bar">
+        <a href="index.html" class="menu-link">Home</a>
+        <a href="about.html" class="menu-link">About</a>
+        <a href="donate.html" class="menu-link">Donate</a>
+        <a href="volunteer.html" class="menu-link">Volunteer</a>
+    </div>
+    <div class="content">
+        <h1>Volunteer</h1>
+        <p>No Volunteering Opportunities at the moment, check out our <a href="https://www.instagram.com/mindmatters_foundation/" target="_blank">Instagram</a> for updates.</p>
+    </div>
+    <footer>
+        <div class="social-buttons">
+            <a href="https://www.instagram.com/mindmatters_foundation/" target="_blank">
+                <img src="https://static-00.iconduck.com/assets.00/instagram-with-circle-icon-2048x2048-21sdb59c.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/company/mindmatters_foundation/" target="_blank">
+                <img src="https://static-00.iconduck.com/assets.00/linkedin-with-circle-icon-1024x1024-m0epmra3.png" alt="LinkedIn">
+            </a>
+        </div>
+        <p>
+            <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="donate.html">Donate</a> |
+            <a href="volunteer.html">Volunteer</a>
+        </p>
+        <p>Contact us: <a href="mailto:mindmattersfoundation24@gmail.com">mindmattersfoundation24@gmail.com</a></p>
+    </footer>
+</body>
+</html>

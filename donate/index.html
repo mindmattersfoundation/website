@@ -57,8 +57,7 @@
         }
         .payment-section {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-between; /* Ensures spacing between boxes */
             gap: 30px;
             margin: 30px 0;
         }
@@ -67,7 +66,7 @@
             padding: 20px;
             border: 1px solid var(--secondary-color);
             border-radius: 10px;
-            width: 350px;
+            width: 350px; /* Fixed width for each box */
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
@@ -94,7 +93,7 @@
             padding: 20px;
             border: 1px solid var(--secondary-color);
             border-radius: 10px;
-            width: 730px; /* Matches width of two payment boxes */
+            width: 100%; /* Full width of the container */
             margin-top: 20px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }

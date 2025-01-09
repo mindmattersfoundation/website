@@ -83,17 +83,16 @@
             background: var(--secondary-color);
         }
         .photo-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 20px;
         }
         .photo-placeholder {
             position: relative;
-            width: 300px;
-            height: 225px; /* Aspect ratio 4:3 */
+            flex: 1 1 calc(33.333% - 20px);
+            height: 500px;
             overflow: hidden;
-            border-radius: 10px;
             cursor: pointer;
         }
         .photo-placeholder img {
@@ -164,13 +163,13 @@
         <a href="donate.html" class="donate-button">Donate Now</a>
         <div class="photo-section">
             <a href="about.html" class="photo-placeholder">
+                <img src="volunteering_temp.jpg" alt="Volunteering">
+                <span>About</span>
+            </a>
+            <a href="about.html" class="photo-placeholder">
                 <img src="paata_beach.png" alt="About Us">
                 <span>About</span>
             </a>
-            <div class="photo-placeholder">
-                <img src="https://via.placeholder.com/1024x768" alt="Photo Placeholder 2">
-                <span>Photo Placeholder</span>
-            </div>
             <div class="photo-placeholder">
                 <img src="https://via.placeholder.com/1024x768" alt="Photo Placeholder 3">
                 <span>Photo Placeholder</span>

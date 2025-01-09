@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Mind Matters</title>
+    <title>Mind Matters Home Page</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         :root {
@@ -18,7 +18,6 @@
             padding: 0;
             color: var(--secondary-color);
             background: var(--white);
-            line-height: 1.6;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -57,43 +56,70 @@
             width: 100%;
         }
         .content {
-            margin: 80px auto;
-            max-width: 800px;
-            padding: 20px;
             text-align: center;
+            padding-top: 100px;
+            flex: 1;
         }
-        .section {
-            margin-bottom: 40px;
+        .logo {
+            margin: 20px 0;
         }
-        .leader-photo {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin: 20px auto;
+        .logo img {
+            width: 400px;
+            height: auto;
         }
-        h1, h2 {
-            color: var(--secondary-color);
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        h3 {
+        .donate-button {
+            margin: 30px auto;
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
             font-size: 1.5rem;
-            margin-bottom: 10px;
+            text-decoration: none;
+            transition: background 0.3s ease;
         }
-        p {
-            text-align: center;
+        .donate-button:hover {
+            background: var(--secondary-color);
         }
-        .team-members {
+        .photo-section {
             display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
             flex-wrap: wrap;
-            gap: 40px;
+            gap: 10px;
+            padding: 20px;
         }
-        .team-member {
-            width: 200px;
-            text-align: center;
+        .photo-placeholder {
+            position: relative;
+            flex: 1 1 calc(33.333% - 20px);
+            height: 500px;
+            overflow: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        .photo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            border-radius: 15px;
+        }
+        .photo-placeholder:hover img {
+            transform: scale(1.1);
+        }
+        .photo-placeholder span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--white);
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .photo-placeholder:hover span {
+            opacity: 1;
         }
         footer {
             background: var(--secondary-color);
@@ -131,67 +157,25 @@
         <a href="/website" class="menu-link">Home</a>
         <a href="/website/about" class="menu-link">About</a>
         <a href="/website/donate" class="menu-link">Donate</a>
-        <a href="/website/volunteering" class="menu-link">Volunteer</a>
     </div>
     <div class="content">
-        <div class="section">
-            <h1>Our Mission</h1>
-            <p>
-                At Mind Matters, our mission is to raise and allocate funds for groundbreaking
-                neuroscience research aimed at curing Alzheimer's, dementia, Parkinson's,
-                and other neurological disorders. We are committed to supporting the
-                scientists and researchers who are making strides in understanding and
-                treating these conditions. By funding innovative research, we provide hope
-                and work towards a future where these debilitating diseases are a thing of
-                the past. Join us in empowering minds and transforming lives through the
-                power of science and community support.
-            </p>
+        <div class="logo">
+            <img src="MindMattersLogo_Upload.png" alt="Mind Matters Logo">
         </div>
-        <div class="section">
-            <h1>The Team</h1>
-            
-            <!-- Founder Section -->
-            <h3>Founder</h3>
-            <img src="Rhys.png" alt="Rhys Ahamparam" class="leader-photo">
-            <h3>Rhys Ahamparam</h3>
-            <p>
-                Hi, my name is Rhys Ahamparam, and I’m a high school junior from Houston, Texas.
-                I founded this nonprofit in memory of my grandfather, who was diagnosed with
-                Lewy body dementia. Watching him battle this disease had a profound impact on me,
-                and his passing earlier this year inspired me to take action. Through this
-                organization, I hope to raise awareness and support for neuroscience research,
-                aiming to make a difference for others affected by similar conditions.
-            </p>
-            
-            <!-- Additional Team Members -->
-            <div class="team-members">
-                <!-- Eshaan Tripathi -->
-                <div class="team-member">
-                    <img src="placeholderimage.png" alt="Eshaan Tripathi" class="leader-photo">
-                    <h3>Eshaan Tripathi</h3>
-                    <p>Director of Operations</p>
-                </div>
-
-                <!-- JD Suarez -->
-                <div class="team-member">
-                    <img src="JD.png" alt="JD Suarez" class="leader-photo">
-                    <h3>JD Suarez</h3>
-                    <p>Outreach Coordinator</p>
-                </div>
-
-                <!-- David Achinivu -->
-                <div class="team-member">
-                    <img src="placeholderimage.png" alt="David Achinivu" class="leader-photo">
-                    <h3>David Achinivu</h3>
-                    <p>Assistant Outreach Coordinator</p>
-                </div>
-
-                <!-- Emmanuel Wieczorek -->
-                <div class="team-member">
-                    <img src="placeholderimage.png" alt="Emmanuel Wieczorek" class="leader-photo">
-                    <h3>Emmanuel Wieczorek</h3>
-                    <p>Volunteer Coordinator</p>
-                </div>
+        <a href="/website/donate" class="donate-button">Donate Now</a>
+        <div class="photo-section">
+            <div class="photo-placeholder">
+            <a href="/website/volunteering/" class="photo-placeholder">
+                <img src="volunteering_temp.jpg" alt="Volunteering">
+                <span>Volunteer</span>
+            </div>
+            <a href="/website/about/" class="photo-placeholder">
+                <img src="paata_beach.png" alt="About Us">
+                <span>About</span>
+            </a>
+            <div class="photo-placeholder">
+                <img src="https://via.placeholder.com/1024x768" alt="Photo Placeholder 3">
+                <span>Photo Placeholder</span>
             </div>
         </div>
     </div>
@@ -205,10 +189,9 @@
             </a>
         </div>
         <p>
-            <a href="/index">Home</a> |
-            <a href="/about">About</a> |
-            <a href="/donate">Donate</a> |
-            <a href="/volunteer">Volunteer</a>
+            <a href="/website/">Home</a> |
+            <a href="/website/about">About</a> |
+            <a href="/website/donate">Donate</a>
         </p>
         <p>Contact us: <a href="mailto:mindmattersfoundation24@gmail.com">mindmattersfoundation24@gmail.com</a></p>
     </footer>

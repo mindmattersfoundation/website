@@ -19,7 +19,7 @@
             background: var(--white);
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Ensures the page height fills the viewport */
+            min-height: 100vh;
         }
         .menu-bar {
             position: fixed;
@@ -39,10 +39,10 @@
             font-size: 1rem;
         }
         .content {
-            margin: 120px auto 20px; /* Add spacing above and below */
+            margin: 120px auto 20px;
             max-width: 800px;
             text-align: center;
-            flex: 1; /* Pushes footer to the bottom if content is short */
+            flex: 1;
         }
         .logo {
             margin-bottom: 20px;
@@ -67,7 +67,7 @@
             padding: 20px;
             border: 1px solid var(--secondary-color);
             border-radius: 10px;
-            width: 350px; /* Increased width for better layout */
+            width: 350px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
@@ -89,12 +89,25 @@
             word-break: break-word;
             color: var(--secondary-color);
         }
+        .alternate-methods {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid var(--secondary-color);
+            border-radius: 10px;
+            width: 730px; /* Matches width of two payment boxes */
+            margin-top: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .alternate-methods img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
         footer {
             background: var(--secondary-color);
             color: var(--white);
             padding: 20px;
             text-align: center;
-            margin-top: auto; /* Ensures footer stays at the bottom */
+            margin-top: auto;
         }
         footer .social-buttons {
             display: flex;
@@ -138,11 +151,11 @@
                 <p class="payment-name">Donate via Zelle</p>
                 <p class="payment-handle">mindmattersfoundation24@gmail.com</p>
             </div>
-            <div class="payment-option">
-                <img src="https://via.placeholder.com/100" alt="Contact">
-                <p class="payment-name">Alternate Donation Methods</p>
-                <p class="payment-handle">DM us on Instagram or email us at <strong>mindmattersfoundation24@gmail.com</strong></p>
-            </div>
+        </div>
+        <div class="alternate-methods">
+            <img src="contact_image.png" alt="Contact">
+            <p class="payment-name">Alternate Donation Methods</p>
+            <p>DM us on Instagram or email us at <strong>mindmattersfoundation24@gmail.com</strong> if you'd like to suggest another donation method.</p>
         </div>
         <p>Your payment information is handled securely. We do not store or share your personal information.</p>
     </div>

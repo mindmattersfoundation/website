@@ -57,7 +57,7 @@
         }
         .payment-section {
             display: flex;
-            justify-content: space-between; /* Ensures spacing between boxes */
+            justify-content: space-between;
             gap: 30px;
             margin: 30px 0;
         }
@@ -66,7 +66,7 @@
             padding: 20px;
             border: 1px solid var(--secondary-color);
             border-radius: 10px;
-            width: 350px; /* Fixed width for each box */
+            width: 350px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
@@ -90,15 +90,19 @@
         }
         .alternate-methods {
             text-align: center;
-            padding: 20px;
+            padding: 30px; /* Increased padding */
             border: 1px solid var(--secondary-color);
             border-radius: 10px;
-            width: 750px; /* Reduced width slightly */
+            width: 800px; /* Slightly larger width */
             margin-top: 20px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease; /* Added hover effect */
+        }
+        .alternate-methods:hover {
+            transform: translateY(-5px);
         }
         .alternate-methods img {
-            width: 100px; /* Made the image larger */
+            width: 120px; /* Larger image */
             margin-bottom: 10px;
         }
         footer {

@@ -55,10 +55,11 @@
         .section {
             margin-bottom: 40px;
         }
-        .gray-placeholder {
+        .leader-photo {
             width: 200px;
             height: 200px;
-            background: gray;
+            object-fit: cover;
+            border-radius: 50%;
             margin: 20px auto;
         }
         h1, h2 {
@@ -73,16 +74,15 @@
         p {
             text-align: center;
         }
-        /* Styles for the additional team members */
         .team-members {
             display: flex;
             justify-content: space-around;
             align-items: flex-start;
-            flex-wrap: wrap; /* Allows wrapping on smaller screens */
-            gap: 40px; /* Spacing between each member block */
+            flex-wrap: wrap;
+            gap: 40px;
         }
         .team-member {
-            width: 200px; /* Ensures the placeholders line up nicely */
+            width: 200px;
             text-align: center;
         }
     </style>
@@ -91,7 +91,7 @@
     <div class="menu-bar">
         <a href="index.html" class="menu-link">Home</a>
         <a href="about.html" class="menu-link">About</a>
-        <a href="donate.html" class="menu-link">Donate</a>
+        <a href="donate.html" class="menu-link" target="_blank">Donate</a>
     </div>
     <div class="content">
         <div class="section">
@@ -112,7 +112,7 @@
             
             <!-- Founder Section -->
             <h3>Founder</h3>
-            <div class="gray-placeholder"></div>
+            <img src="Rhys.png" alt="Rhys Ahamparam" class="leader-photo">
             <h3>Rhys Ahamparam</h3>
             <p>
                 Hi, my name is Rhys Ahamparam, and I’m a high school junior from Houston, Texas.
@@ -127,28 +127,28 @@
             <div class="team-members">
                 <!-- Eshaan Tripathi -->
                 <div class="team-member">
-                    <div class="gray-placeholder"></div>
+                    <img src="esh.png" alt="Eshaan Tripathi" class="leader-photo">
                     <h3>Eshaan Tripathi</h3>
                     <p>Director of Operations</p>
                 </div>
 
                 <!-- JD Suarez -->
                 <div class="team-member">
-                    <div class="gray-placeholder"></div>
+                    <img src="JD.png" alt="JD Suarez" class="leader-photo">
                     <h3>JD Suarez</h3>
                     <p>Outreach Coordinator</p>
                 </div>
 
                 <!-- David Achinivu -->
                 <div class="team-member">
-                    <div class="gray-placeholder"></div>
+                    <img src="david.png" alt="David Achinivu" class="leader-photo">
                     <h3>David Achinivu</h3>
                     <p>Assistant Outreach Coordinator</p>
                 </div>
 
                 <!-- Emmanuel Wieczorek -->
                 <div class="team-member">
-                    <div class="gray-placeholder"></div>
+                    <img src="emmanuel.png" alt="Emmanuel Wieczorek" class="leader-photo">
                     <h3>Emmanuel Wieczorek</h3>
                     <p>Volunteer Coordinator</p>
                 </div>

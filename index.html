@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mind Matters Home Page</title>
+    <title>About - Mind Matters</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         :root {
@@ -24,49 +24,25 @@
         }
 
         .content {
+            margin: 120px auto;
+            max-width: 1000px;
             text-align: center;
-            padding-top: 100px;
             flex: 1;
-        }
-
-        .logo {
-            margin: 20px 0;
-        }
-
-        .logo img {
-            width: 400px;
-            height: auto;
-        }
-
-        .donate-button {
-            margin: 30px auto;
-            display: inline-block;
-            background: var(--primary-color);
-            color: var(--white);
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.5rem;
-            text-decoration: none;
-            transition: background 0.3s ease;
-        }
-
-        .donate-button:hover {
-            background: var(--secondary-color);
         }
 
         .photo-section {
             display: flex;
-            gap: 10px;
-            padding: 20px;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .photo-placeholder {
             position: relative;
-            width: 1024px;
-            height: 768px;
+            width: 300px;
+            height: 200px;
             overflow: hidden;
-            border-radius: 15px;
+            border-radius: 10px;
             cursor: pointer;
         }
 
@@ -74,8 +50,8 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 10px;
             transition: transform 0.3s ease;
-            border-radius: 15px;
         }
 
         .photo-placeholder:hover img {
@@ -92,6 +68,7 @@
             padding: 10px 20px;
             border-radius: 5px;
             opacity: 0;
+            font-size: 1.2rem;
             transition: opacity 0.3s ease;
         }
 
@@ -103,27 +80,31 @@
 <body>
     <div id="header"></div>
     <div class="content">
-        <div class="logo">
-            <img src="MindMattersLogo_Upload.png" alt="Mind Matters Logo">
-        </div>
-        <a href="/website/donate" class="donate-button">Donate Now</a>
+        <h1>About Mind Matters</h1>
+        <p>
+            At Mind Matters, our mission is to fund cutting-edge neuroscience research and support the community affected by neurological disorders.
+        </p>
         <div class="photo-section">
+            <!-- Volunteer Section -->
             <a href="/website/volunteer" class="photo-placeholder">
                 <img src="volunteering_temp.jpg" alt="Volunteering">
                 <span>Volunteer</span>
             </a>
+
+            <!-- Our Story Section -->
             <a href="/website/about" class="photo-placeholder">
-                <img src="paata_beach.png" alt="About Us">
-                <span>About</span>
+                <img src="paata_beach.png" alt="Our Story">
+                <span>Our Story</span>
             </a>
-            <div class="photo-placeholder">
-                <img src="https://via.placeholder.com/1024x768" alt="Photo Placeholder 3">
-                <span>Photo Placeholder</span>
-            </div>
+
+            <!-- How We Help Section -->
+            <a href="/website/howwehelp" class="photo-placeholder">
+                <img src="help.png" alt="How We Help">
+                <span>How We Help</span>
+            </a>
         </div>
     </div>
     <div id="footer"></div>
-
     <script>
         // Load header
         fetch('/website/header.html')

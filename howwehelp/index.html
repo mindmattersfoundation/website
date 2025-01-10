@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Mind Matters</title>
+    <title>How We Help - Mind Matters</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         :root {
@@ -11,7 +11,6 @@
             --secondary-color: rgb(10, 129, 66);
             --white: #ffffff;
         }
-
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -22,113 +21,80 @@
             flex-direction: column;
             min-height: 100vh;
         }
-
         .content {
-            margin: 120px auto; /* Matches header height */
-            max-width: 800px;
+            margin: 120px auto 20px;
+            max-width: 1000px;
             text-align: center;
+            flex: 1;
         }
-
-        .leader-photo {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin: 20px auto;
-        }
-
-        h1, h2 {
-            color: var(--secondary-color);
-            font-size: 2rem;
+        .logo {
             margin-bottom: 20px;
         }
-
-        h3 {
-            font-size: 1.5rem;
+        .logo img {
+            width: 150px;
+        }
+        .intro {
+            margin: 20px 0;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        .donate-button {
+            margin: 30px auto;
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .donate-button:hover {
+            background: var(--secondary-color);
+        }
+        .beneficiaries {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .beneficiary {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid var(--secondary-color);
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .beneficiary img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 10px;
             margin-bottom: 10px;
         }
-
-        p {
-            text-align: center;
-        }
-
-        .team-members {
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-
-        .team-member {
-            width: 200px;
-            text-align: center;
-        }
-
     </style>
 </head>
 <body>
     <div id="header"></div>
     <div class="content">
-        <div class="section">
-            <h1>Our Mission</h1>
-            <p>
-                At Mind Matters, our mission is to raise and allocate funds for groundbreaking
-                neuroscience research aimed at curing Alzheimer's, dementia, Parkinson's,
-                and other neurological disorders. We are committed to supporting the
-                scientists and researchers who are making strides in understanding and
-                treating these conditions. By funding innovative research, we provide hope
-                and work towards a future where these debilitating diseases are a thing of
-                the past. Join us in empowering minds and transforming lives through the
-                power of science and community support.
-            </p>
+        <div class="logo">
+            <img src="/website/MindMattersLogo_Upload.png" alt="Mind Matters Logo">
+            <h2>How We Help</h2>
         </div>
-        <div class="section">
-            <h1>The Team</h1>
-            
-            <!-- Founder Section -->
-            <h3>Founder</h3>
-            <img src="Rhys.png" alt="Rhys Ahamparam" class="leader-photo">
-            <h3>Rhys Ahamparam</h3>
-            <p>
-                Hi, my name is Rhys Ahamparam, and I’m a high school junior from Houston, Texas.
-                I founded this nonprofit in memory of my grandfather, who was diagnosed with
-                Lewy body dementia. Watching him battle this disease had a profound impact on me,
-                and his passing earlier this year inspired me to take action. Through this
-                organization, I hope to raise awareness and support for neuroscience research,
-                aiming to make a difference for others affected by similar conditions.
-            </p>
-            
-            <!-- Additional Team Members -->
-            <div class="team-members">
-                <!-- Eshaan Tripathi -->
-                <div class="team-member">
-                    <img src="placeholderimage.png" alt="Eshaan Tripathi" class="leader-photo">
-                    <h3>Eshaan Tripathi</h3>
-                    <p>Director of Operations</p>
-                </div>
-
-                <!-- JD Suarez -->
-                <div class="team-member">
-                    <img src="JD.png" alt="JD Suarez" class="leader-photo">
-                    <h3>JD Suarez</h3>
-                    <p>Outreach Coordinator</p>
-                </div>
-
-                <!-- David Achinivu -->
-                <div class="team-member">
-                    <img src="placeholderimage.png" alt="David Achinivu" class="leader-photo">
-                    <h3>David Achinivu</h3>
-                    <p>Assistant Outreach Coordinator</p>
-                </div>
-
-                <!-- Emmanuel Wieczorek -->
-                <div class="team-member">
-                    <img src="placeholderimage.png" alt="Emmanuel Wieczorek" class="leader-photo">
-                    <h3>Emmanuel Wieczorek</h3>
-                    <p>Volunteer Coordinator</p>
-                </div>
+        <p class="intro">
+            At Mind Matters, we focus on making a meaningful impact by supporting organizations and projects dedicated to advancing neuroscience research and providing care for those affected by neurological disorders.
+        </p>
+        <a href="/website/donate" class="donate-button">Donate Now</a>
+        <div class="beneficiaries">
+            <div class="beneficiary">
+                <img src="CAND.png" alt="Center for Alzheimer's and Neurodegenerative Diseases">
+                <h3>Center for Alzheimer's and Neurodegenerative Diseases (CAND)</h3>
+                <p>
+                    A leading institution in research and care for individuals affected by Alzheimer's and other neurodegenerative diseases.
+                </p>
             </div>
+            <!-- Additional beneficiaries can be added here -->
         </div>
     </div>
     <div id="footer"></div>

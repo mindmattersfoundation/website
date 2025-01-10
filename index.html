@@ -30,19 +30,27 @@
             flex: 1;
         }
 
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            width: 400px;
+            height: auto;
+        }
+
         .photo-section {
             display: flex;
-            gap: 20px;
+            gap: 10px;
             justify-content: center;
-            flex-wrap: wrap;
         }
 
         .photo-placeholder {
             position: relative;
-            width: 300px;
-            height: 200px;
+            width: 1024px;
+            height: 768px;
             overflow: hidden;
-            border-radius: 10px;
+            border-radius: 15px;
             cursor: pointer;
         }
 
@@ -50,7 +58,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 15px;
             transition: transform 0.3s ease;
         }
 
@@ -67,8 +75,8 @@
             background: rgba(0, 0, 0, 0.6);
             padding: 10px 20px;
             border-radius: 5px;
+            font-size: 1.5rem;
             opacity: 0;
-            font-size: 1.2rem;
             transition: opacity 0.3s ease;
         }
 
@@ -80,6 +88,9 @@
 <body>
     <div id="header"></div>
     <div class="content">
+        <div class="logo">
+            <img src="/website/MindMattersLogo_Upload.png" alt="Mind Matters Logo">
+        </div>
         <h1>About Mind Matters</h1>
         <p>
             At Mind Matters, our mission is to fund cutting-edge neuroscience research and support the community affected by neurological disorders.

@@ -12,66 +12,20 @@
             --white: #ffffff;
         }
 
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             color: var(--secondary-color);
             background: var(--white);
-            line-height: 1.6;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
         .content {
-            margin: 80px auto;
+            margin: 120px auto; /* Matches header height */
             max-width: 800px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .leader-photo {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin: 20px auto;
-        }
-
-        h1, h2 {
-            color: var(--secondary-color);
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        p {
-            text-align: center;
-        }
-
-        .team-members {
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-
-        .team-member {
-            width: 200px;
             text-align: center;
         }
     </style>
@@ -79,69 +33,19 @@
 <body>
     <div id="header"></div>
     <div class="content">
-        <div class="section">
-            <h1>Our Mission</h1>
-            <p>
-                At Mind Matters, our mission is to raise and allocate funds for groundbreaking
-                neuroscience research aimed at curing Alzheimer's, dementia, Parkinson's,
-                and other neurological disorders. We are committed to supporting the
-                scientists and researchers who are making strides in understanding and
-                treating these conditions. By funding innovative research, we provide hope
-                and work towards a future where these debilitating diseases are a thing of
-                the past. Join us in empowering minds and transforming lives through the
-                power of science and community support.
-            </p>
-        </div>
-        <div class="section">
-            <h1>The Team</h1>
-            
-            <!-- Founder Section -->
-            <h3>Founder</h3>
-            <img src="Rhys.png" alt="Rhys Ahamparam" class="leader-photo">
-            <h3>Rhys Ahamparam</h3>
-            <p>
-                Hi, my name is Rhys Ahamparam, and I’m a high school junior from Houston, Texas.
-                I founded this nonprofit in memory of my grandfather, who was diagnosed with
-                Lewy body dementia. Watching him battle this disease had a profound impact on me,
-                and his passing earlier this year inspired me to take action. Through this
-                organization, I hope to raise awareness and support for neuroscience research,
-                aiming to make a difference for others affected by similar conditions.
-            </p>
-            
-            <!-- Additional Team Members -->
-            <div class="team-members">
-                <!-- Eshaan Tripathi -->
-                <div class="team-member">
-                    <img src="placeholderimage.png" alt="Eshaan Tripathi" class="leader-photo">
-                    <h3>Eshaan Tripathi</h3>
-                    <p>Director of Operations</p>
-                </div>
-
-                <!-- JD Suarez -->
-                <div class="team-member">
-                    <img src="JD.png" alt="JD Suarez" class="leader-photo">
-                    <h3>JD Suarez</h3>
-                    <p>Outreach Coordinator</p>
-                </div>
-
-                <!-- David Achinivu -->
-                <div class="team-member">
-                    <img src="placeholderimage.png" alt="David Achinivu" class="leader-photo">
-                    <h3>David Achinivu</h3>
-                    <p>Assistant Outreach Coordinator</p>
-                </div>
-
-                <!-- Emmanuel Wieczorek -->
-                <div class="team-member">
-                    <img src="placeholderimage.png" alt="Emmanuel Wieczorek" class="leader-photo">
-                    <h3>Emmanuel Wieczorek</h3>
-                    <p>Volunteer Coordinator</p>
-                </div>
-            </div>
-        </div>
+        <h1>Our Mission</h1>
+        <p>
+            At Mind Matters, our mission is to raise and allocate funds for groundbreaking
+            neuroscience research aimed at curing Alzheimer's, dementia, Parkinson's,
+            and other neurological disorders. We are committed to supporting the
+            scientists and researchers who are making strides in understanding and
+            treating these conditions. By funding innovative research, we provide hope
+            and work towards a future where these debilitating diseases are a thing of
+            the past. Join us in empowering minds and transforming lives through the
+            power of science and community support.
+        </p>
     </div>
     <div id="footer"></div>
-
     <script>
         // Load header
         fetch('/website/header.html')

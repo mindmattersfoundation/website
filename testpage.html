@@ -12,14 +12,15 @@
             --white: #ffffff;
         }
 
-        * {
+        html, body {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            height: 100%;
         }
 
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             color: var(--secondary-color);
             background: var(--white);
             line-height: 1.6;
@@ -28,84 +29,59 @@
             min-height: 100vh;
         }
 
+        .menu-bar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            z-index: 2;
+            font-size: 1rem;
+            line-height: 1.2;
+        }
+
+        .menu-bar a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: var(--white);
+            font-size: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .menu-bar a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--white);
+            transition: width 0.3s ease-in-out;
+        }
+
+        .menu-bar a:hover::after {
+            width: 100%;
+        }
+
         .content {
-            margin: 80px auto;
+            margin: 100px auto 20px; /* Adjusted to compensate for fixed menu */
             max-width: 800px;
             padding: 20px;
             text-align: center;
-            position: relative;
         }
 
         .section {
             margin-bottom: 40px;
-            position: relative;
-        }
-
-        .decorative {
-            position: absolute;
-            z-index: -1;
-            overflow: hidden;
-            pointer-events: none;
-        }
-
-        /* Decorative Blob Top Left */
-        .decorative.blob-top-left {
-            top: -50px;
-            left: -80px;
-            width: 150px;
-            height: 150px;
-            background: var(--primary-color);
-            border-radius: 50%;
-            opacity: 0.2;
-        }
-
-        /* Decorative Blob Bottom Right */
-        .decorative.blob-bottom-right {
-            bottom: -50px;
-            right: -80px;
-            width: 200px;
-            height: 200px;
-            background: var(--secondary-color);
-            border-radius: 50%;
-            opacity: 0.2;
-        }
-
-        /* Decorative Line Left */
-        .decorative.line-left {
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background: var(--primary-color);
-            opacity: 0.1;
-        }
-
-        /* Decorative Line Right */
-        .decorative.line-right {
-            top: 0;
-            right: 0;
-            width: 5px;
-            height: 100%;
-            background: var(--secondary-color);
-            opacity: 0.1;
         }
 
         h1, h2 {
             color: var(--secondary-color);
             font-size: 2rem;
             margin-bottom: 20px;
-        }
-
-        p {
-            text-align: center;
-        }
-
-        .leader-photo {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin: 20px auto;
         }
 
         .team-members {
@@ -115,74 +91,14 @@
             flex-wrap: wrap;
             gap: 40px;
         }
-
-        .team-member {
-            width: 200px;
-            text-align: center;
-        }
     </style>
 </head>
 <body>
     <div id="header"></div>
     <div class="content">
-        <div class="decorative blob-top-left"></div>
-        <div class="decorative blob-bottom-right"></div>
-        <div class="decorative line-left"></div>
-        <div class="decorative line-right"></div>
-
         <div class="section">
             <h1>Our Mission</h1>
-            <p>
-                At Mind Matters, our mission is to raise and allocate funds for groundbreaking
-                neuroscience research aimed at curing Alzheimer's, dementia, Parkinson's,
-                and other neurological disorders. We are committed to supporting the
-                scientists and researchers who are making strides in understanding and
-                treating these conditions. By funding innovative research, we provide hope
-                and work towards a future where these debilitating diseases are a thing of
-                the past. Join us in empowering minds and transforming lives through the
-                power of science and community support.
-            </p>
-        </div>
-
-        <div class="section">
-            <h1>The Team</h1>
-            
-            <!-- Founder Section -->
-            <h3>Founder</h3>
-            <img src="Rhys.png" alt="Rhys Ahamparam" class="leader-photo">
-            <h3>Rhys Ahamparam</h3>
-            <p>
-                Hi, my name is Rhys Ahamparam, and I’m a high school junior from Houston, Texas.
-                I founded this nonprofit in memory of my grandfather, who was diagnosed with
-                Lewy body dementia. Watching him battle this disease had a profound impact on me,
-                and his passing earlier this year inspired me to take action. Through this
-                organization, I hope to raise awareness and support for neuroscience research,
-                aiming to make a difference for others affected by similar conditions.
-            </p>
-
-            <!-- Additional Team Members -->
-            <div class="team-members">
-                <div class="team-member">
-                    <img src="placeholderimage.png" alt="Eshaan Tripathi" class="leader-photo">
-                    <h3>Eshaan Tripathi</h3>
-                    <p>Director of Operations</p>
-                </div>
-                <div class="team-member">
-                    <img src="JD.png" alt="JD Suarez" class="leader-photo">
-                    <h3>JD Suarez</h3>
-                    <p>Outreach Coordinator</p>
-                </div>
-                <div class="team-member">
-                    <img src="placeholderimage.png" alt="David Achinivu" class="leader-photo">
-                    <h3>David Achinivu</h3>
-                    <p>Assistant Outreach Coordinator</p>
-                </div>
-                <div class="team-member">
-                    <img src="placeholderimage.png" alt="Emmanuel Wieczorek" class="leader-photo">
-                    <h3>Emmanuel Wieczorek</h3>
-                    <p>Volunteer Coordinator</p>
-                </div>
-            </div>
+            <p>Your mission content here...</p>
         </div>
     </div>
     <div id="footer"></div>

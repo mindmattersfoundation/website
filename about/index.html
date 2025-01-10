@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Mind Matters</title>
+    <title>How We Help - Mind Matters</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         :root {
@@ -11,7 +11,6 @@
             --secondary-color: rgb(10, 129, 66);
             --white: #ffffff;
         }
-
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -22,28 +21,81 @@
             flex-direction: column;
             min-height: 100vh;
         }
-
         .content {
-            margin: 120px auto; /* Matches header height */
-            max-width: 800px;
+            margin: 120px auto 20px;
+            max-width: 1000px;
             text-align: center;
+            flex: 1;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 150px;
+        }
+        .intro {
+            margin: 20px 0;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        .donate-button {
+            margin: 30px auto;
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .donate-button:hover {
+            background: var(--secondary-color);
+        }
+        .beneficiaries {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .beneficiary {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid var(--secondary-color);
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .beneficiary img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <div id="header"></div>
     <div class="content">
-        <h1>Our Mission</h1>
-        <p>
-            At Mind Matters, our mission is to raise and allocate funds for groundbreaking
-            neuroscience research aimed at curing Alzheimer's, dementia, Parkinson's,
-            and other neurological disorders. We are committed to supporting the
-            scientists and researchers who are making strides in understanding and
-            treating these conditions. By funding innovative research, we provide hope
-            and work towards a future where these debilitating diseases are a thing of
-            the past. Join us in empowering minds and transforming lives through the
-            power of science and community support.
+        <div class="logo">
+            <img src="/website/MindMattersLogo_Upload.png" alt="Mind Matters Logo">
+            <h2>How We Help</h2>
+        </div>
+        <p class="intro">
+            At Mind Matters, we focus on making a meaningful impact by supporting organizations and projects dedicated to advancing neuroscience research and providing care for those affected by neurological disorders.
         </p>
+        <a href="/website/donate" class="donate-button">Donate Now</a>
+        <div class="beneficiaries">
+            <div class="beneficiary">
+                <img src="CAND.png" alt="Center for Alzheimer's and Neurodegenerative Diseases">
+                <h3>Center for Alzheimer's and Neurodegenerative Diseases (CAND)</h3>
+                <p>
+                    A leading institution in research and care for individuals affected by Alzheimer's and other neurodegenerative diseases.
+                </p>
+            </div>
+            <!-- Additional beneficiaries can be added here -->
+        </div>
     </div>
     <div id="footer"></div>
     <script>

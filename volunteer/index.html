@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volunteer - Mind Matters</title>
+    <title>Donate - Mind Matters</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         :root {
@@ -11,7 +11,6 @@
             --secondary-color: rgb(10, 129, 66);
             --white: #ffffff;
         }
-
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -22,102 +21,130 @@
             flex-direction: column;
             min-height: 100vh;
         }
-        .menu-bar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: var(--secondary-color);
-            color: var(--white);
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-            z-index: 2;
-            font-size: 1rem;
-        }
-        .menu-bar a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: var(--white);
-            font-size: 1rem;
-            position: relative;
-            display: inline-block;
-        }
-        .menu-bar a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--white);
-            transition: width 0.3s ease-in-out;
-        }
-        .menu-bar a:hover::after {
-            width: 100%;
-        }
         .content {
-            margin: 80px auto;
+            margin: 120px auto 20px;
             max-width: 800px;
             text-align: center;
+            flex: 1;
         }
-        footer {
-            background: var(--secondary-color);
-            color: var(--white);
-            padding: 20px;
-            text-align: center;
-            margin-top: auto;
+        .logo {
+            margin-bottom: 20px;
         }
-        footer .social-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+        .logo img {
+            width: 150px;
+        }
+        .donate-intro {
             margin: 20px 0;
+            font-size: 1.2rem;
+            line-height: 1.6;
         }
-        footer .social-buttons a {
+        .payment-section {
             display: flex;
-            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            margin: 30px 0;
         }
-        footer .social-buttons img {
-            width: 40px;
-            height: 40px;
+        .payment-option {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid var(--secondary-color);
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
-        footer a {
-            color: var(--primary-color);
+        .payment-option:hover {
+            transform: translateY(-5px);
+        }
+        .payment-option img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+        .payment-name {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .payment-handle {
+            font-size: 1.1rem;
+            font-weight: bold;
+            word-break: break-word;
+            color: var(--secondary-color);
+        }
+        .alternate-methods {
+            text-align: center;
+            padding: 30px; /* Increased padding */
+            border: 1px solid var(--secondary-color);
+            border-radius: 10px;
+            width: calc(350px * 2 + 30px); /* Combined width of two boxes plus gap */
+            margin: 20px auto; /* Centered the box */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .alternate-methods:hover {
+            transform: translateY(-5px);
+        }
+        .alternate-methods img {
+            width: 120px; /* Larger image */
+            margin-bottom: 10px;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
             text-decoration: none;
-            margin: 0 10px;
+            transition: background 0.3s ease;
         }
-        footer a:hover {
-            text-decoration: underline;
+        .cta-button:hover {
+            background: var(--secondary-color);
         }
     </style>
 </head>
 <body>
-    <div class="menu-bar">
-        <a href="/website/index" class="menu-link">Home</a>
-        <a href="/website/about" class="menu-link">About</a>
-        <a href="/website/donate" class="menu-link">Donate</a>
-        <a href="/website/volunteer" class="menu-link">Volunteer</a>
-    </div>
+    <div id="header"></div>
     <div class="content">
-        <h1>Volunteer</h1>
-        <p>No Volunteering Opportunities at the moment, check out our <a href="https://www.instagram.com/mindmatters_foundation/" target="_blank">Instagram</a> for updates.</p>
-    </div>
-    <footer>
-        <div class="social-buttons">
-            <a href="https://www.instagram.com/mindmatters_foundation/" target="_blank">
-                <img src="https://static-00.iconduck.com/assets.00/instagram-with-circle-icon-2048x2048-21sdb59c.png" alt="Instagram">
-            </a>
-            <a href="https://www.linkedin.com/company/mindmatters_foundation/" target="_blank">
-                <img src="https://static-00.iconduck.com/assets.00/linkedin-with-circle-icon-1024x1024-m0epmra3.png" alt="LinkedIn">
-            </a>
+        <div class="logo">
+            <img src="/website/MindMattersLogo_Upload.png" alt="Mind Matters Logo">
+            <h2>Mind Matters Foundation</h2>
         </div>
-        <p>
-            <a href="/website/">Home</a> |
-            <a href="/website/about">About</a> |
-            <a href="/website/donate">Donate</a> |
-            <a href="/website/volunteer">Volunteer</a>
+        <p class="donate-intro">
+            Your generosity helps us fund groundbreaking neuroscience research and support communities impacted by neurological disorders.
         </p>
-        <p>Contact us: <a href="mailto:mindmattersfoundation24@gmail.com">mindmattersfoundation24@gmail.com</a></p>
-    </footer>
+        <div class="payment-section">
+            <div class="payment-option">
+                <img src="venmologo.png" alt="Venmo">
+                <p class="payment-name">Donate via Venmo</p>
+                <p class="payment-handle">@mindmatters_foundation</p>
+            </div>
+            <div class="payment-option">
+                <img src="zellelogo.png" alt="Zelle">
+                <p class="payment-name">Donate via Zelle</p>
+                <p class="payment-handle">mindmattersfoundation24@gmail.com</p>
+            </div>
+        </div>
+        <div class="alternate-methods">
+            <img src="contact_image.png" alt="Contact">
+            <p class="payment-name">Alternate Donation Methods</p>
+            <p>DM us on Instagram or email us at <strong>mindmattersfoundation24@gmail.com</strong> if you'd like to suggest another donation method.</p>
+        </div>
+        <a href="/website/howwehelp" class="cta-button">Where Is Your Donation Going?</a>
+    </div>
+    <div id="footer"></div>
+    <script>
+        // Load header
+        fetch('/website/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // Load footer
+        fetch('/website/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
 </body>
 </html>

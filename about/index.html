@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate - Mind Matters</title>
+    <title>About - Mind Matters</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         :root {
@@ -11,6 +11,7 @@
             --secondary-color: rgb(10, 129, 66);
             --white: #ffffff;
         }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -21,87 +22,58 @@
             flex-direction: column;
             min-height: 100vh;
         }
+
         .content {
-            margin: 120px auto 20px;
-            max-width: 800px;
+            margin: 120px auto;
+            max-width: 1200px;
             text-align: center;
             flex: 1;
         }
+
         .logo {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
+
         .logo img {
-            width: 150px;
+            width: 400px;
+            height: auto;
         }
-        .donate-intro {
-            margin: 20px 0;
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-        .payment-section {
-            display: flex;
-            justify-content: space-between;
-            gap: 30px;
-            margin: 30px 0;
-        }
-        .payment-option {
-            text-align: center;
-            padding: 20px;
-            border: 1px solid var(--secondary-color);
-            border-radius: 10px;
-            width: 350px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .payment-option:hover {
-            transform: translateY(-5px);
-        }
-        .payment-option img {
-            width: 100px;
-            margin-bottom: 10px;
-        }
-        .payment-name {
-            font-size: 1rem;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .payment-handle {
-            font-size: 1.1rem;
-            font-weight: bold;
-            word-break: break-word;
+
+        h1, h2 {
             color: var(--secondary-color);
+            font-size: 2rem;
         }
-        .alternate-methods {
+
+        .section {
+            margin-bottom: 40px;
             text-align: center;
-            padding: 30px; /* Increased padding */
-            border: 1px solid var(--secondary-color);
-            border-radius: 10px;
-            width: calc(350px * 2 + 30px); /* Combined width of two boxes plus gap */
-            margin: 20px auto; /* Centered the box */
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
         }
-        .alternate-methods:hover {
-            transform: translateY(-5px);
+
+        .leader-photo {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 20px auto;
         }
-        .alternate-methods img {
-            width: 120px; /* Larger image */
-            margin-bottom: 10px;
+
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
         }
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            background: var(--primary-color);
-            color: var(--white);
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            text-decoration: none;
-            transition: background 0.3s ease;
+
+        .team-member {
+            text-align: center;
+            max-width: 250px;
         }
-        .cta-button:hover {
-            background: var(--secondary-color);
+
+        .team-member img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -110,29 +82,51 @@
     <div class="content">
         <div class="logo">
             <img src="/website/MindMattersLogo_Upload.png" alt="Mind Matters Logo">
-            <h2>Mind Matters Foundation</h2>
         </div>
-        <p class="donate-intro">
-            Your generosity helps us fund groundbreaking neuroscience research and support communities impacted by neurological disorders.
-        </p>
-        <div class="payment-section">
-            <div class="payment-option">
-                <img src="venmologo.png" alt="Venmo">
-                <p class="payment-name">Donate via Venmo</p>
-                <p class="payment-handle">@mindmatters_foundation</p>
+        <div class="section">
+            <h1>Our Mission</h1>
+            <p>
+                At Mind Matters, our mission is to raise and allocate funds for groundbreaking neuroscience research aimed at curing Alzheimer's, dementia, Parkinson's, and other neurological disorders. 
+                We are committed to supporting the scientists and researchers making strides in understanding and treating these conditions.
+            </p>
+        </div>
+        <div class="section">
+            <h1>The Team</h1>
+
+            <!-- Founder Section -->
+            <div class="team-member">
+                <img src="Rhys.png" alt="Rhys Ahamparam" class="leader-photo">
+                <h3>Rhys Ahamparam</h3>
+                <p>Founder</p>
+                <p>
+                    Hi, my name is Rhys Ahamparam, and I’m a high school junior from Houston, Texas. I founded this nonprofit in memory of my grandfather, who was diagnosed with Lewy body dementia. Watching him battle this disease had a profound impact on me, and his passing earlier this year inspired me to take action.
+                </p>
             </div>
-            <div class="payment-option">
-                <img src="zellelogo.png" alt="Zelle">
-                <p class="payment-name">Donate via Zelle</p>
-                <p class="payment-handle">mindmattersfoundation24@gmail.com</p>
+
+            <!-- Additional Team Members -->
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="placeholderimage.png" alt="Eshaan Tripathi">
+                    <h3>Eshaan Tripathi</h3>
+                    <p>Director of Operations</p>
+                </div>
+                <div class="team-member">
+                    <img src="JD.png" alt="JD Suarez">
+                    <h3>JD Suarez</h3>
+                    <p>Outreach Coordinator</p>
+                </div>
+                <div class="team-member">
+                    <img src="placeholderimage.png" alt="David Achinivu">
+                    <h3>David Achinivu</h3>
+                    <p>Assistant Outreach Coordinator</p>
+                </div>
+                <div class="team-member">
+                    <img src="placeholderimage.png" alt="Emmanuel Wieczorek">
+                    <h3>Emmanuel Wieczorek</h3>
+                    <p>Volunteer Coordinator</p>
+                </div>
             </div>
         </div>
-        <div class="alternate-methods">
-            <img src="contact_image.png" alt="Contact">
-            <p class="payment-name">Alternate Donation Methods</p>
-            <p>DM us on Instagram or email us at <strong>mindmattersfoundation24@gmail.com</strong> if you'd like to suggest another donation method.</p>
-        </div>
-        <a href="/website/howwehelp" class="cta-button">Where Is Your Donation Going?</a>
     </div>
     <div id="footer"></div>
     <script>

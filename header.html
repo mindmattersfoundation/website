@@ -1,7 +1,45 @@
 <div class="menu-bar">
-    <a href="/website">Home</a>
-    <a href="/website/about">About</a>
-    <a href="/website/donate">Donate</a>
-    <a href="/website/volunteer">Volunteer</a>
-    <a href="/website/howwehelp">How We Help</a>
+    <a href="/website" class="menu-link">Home</a>
+    <a href="/website/about" class="menu-link">About</a>
+    <a href="/website/donate" class="menu-link">Donate</a>
+    <a href="/website/volunteer" class="menu-link">Volunteer</a>
+    <a href="/website/howwehelp" class="menu-link">How We Help</a>
 </div>
+
+<style>
+    .menu-bar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: rgb(10, 129, 66); /* Secondary color */
+        color: #ffffff; /* White text */
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        z-index: 2;
+    }
+
+    .menu-bar a {
+        margin: 0 20px;
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1rem;
+        position: relative;
+        display: inline-block;
+    }
+
+    .menu-bar a::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #ffffff;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .menu-bar a:hover::after {
+        width: 100%;
+    }
+</style>
